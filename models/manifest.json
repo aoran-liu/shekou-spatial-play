@@ -1,0 +1,8 @@
+{
+  "hall-facade": {"enabled": false, "file": "hall-facade.glb"},
+  "office-facade": {"enabled": false, "file": "office-facade.glb"},
+  "press-facade": {"enabled": false, "file": "press-facade.glb"},
+  "harbor-boat": {"enabled": false, "file": "harbor-boat.glb"},
+  "office-desk": {"enabled": false, "file": "office-desk.glb"},
+  "press-desk": {"enabled": false, "file": "press-desk.glb"}
+}
