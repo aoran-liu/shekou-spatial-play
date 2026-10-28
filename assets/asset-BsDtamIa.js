@@ -1,0 +1,1 @@
+var e=`/shekou-spatial-play/`.replace(/\/$/,``),t=t=>e+t;export{t};
