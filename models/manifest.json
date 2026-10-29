@@ -1,8 +1,33 @@
 {
-  "hall-facade": {"enabled": false, "file": "hall-facade.glb"},
-  "office-facade": {"enabled": false, "file": "office-facade.glb"},
-  "press-facade": {"enabled": false, "file": "press-facade.glb"},
-  "harbor-boat": {"enabled": false, "file": "harbor-boat.glb"},
-  "office-desk": {"enabled": false, "file": "office-desk.glb"},
-  "press-desk": {"enabled": false, "file": "press-desk.glb"}
+  "hall-facade": {
+    "enabled": true,
+    "file": "hall-facade.glb",
+    "modelRotation": -1.5707963267948966,
+    "version": "20261027"
+  },
+  "office-facade": {
+    "enabled": true,
+    "file": "office-facade.glb",
+    "modelRotation": -1.5707963267948966,
+    "version": "20261027"
+  },
+  "press-facade": {
+    "enabled": true,
+    "file": "press-building-20261028.glb",
+    "modelRotation": -1.5707963267948966,
+    "height": 24,
+    "version": "20261028-hd1"
+  },
+  "harbor-boat": {
+    "enabled": false,
+    "file": "harbor-boat.glb"
+  },
+  "office-desk": {
+    "enabled": false,
+    "file": "office-desk.glb"
+  },
+  "press-desk": {
+    "enabled": false,
+    "file": "press-desk.glb"
+  }
 }

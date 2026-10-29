@@ -1,0 +1,27 @@
+/* Player-facing HUD: map and two illustrated tools, all in one safe corner. */
+.world-game .world-header,.world-game .world-task,.world-game .world-routes,.world-game .world-footer,.world-game .world-compass,.world-game .world-labels,.world-game .district-review{display:none!important}
+.campaign-header nav,.campaign-header .campaign-brand,.campaign-footer{display:none!important}
+.campaign-game[data-campaign-phase="explore"] .campaign-header{display:none}
+.game-hud{position:absolute;right:max(24px,env(safe-area-inset-right));top:max(24px,env(safe-area-inset-top));z-index:35;display:flex;flex-direction:column;align-items:center;gap:13px;pointer-events:auto}
+.hud-minimap{position:relative;width:156px;height:156px;display:block;padding:11px;border:1px solid #d5c087a8;border-radius:50%;background:#263e39cf;color:#efdfb2;box-shadow:0 4px 24px #102b3040,inset 0 0 0 4px #52645788;cursor:pointer;transition:box-shadow .2s}
+.hud-minimap:hover,.hud-minimap:focus-visible{box-shadow:0 0 0 2px #f0d48b,0 8px 28px #142e3050;outline:none}
+.minimap-disc{display:block;width:100%;height:100%;overflow:hidden;border-radius:50%;border:1px solid #d3c99777;background:#345e60}
+.minimap-disc svg{display:block;width:100%;height:100%}
+.hud-minimap>span:not(.minimap-disc){position:absolute;font:14px 'Songti SC',serif;text-shadow:0 1px 3px #142f29;line-height:18px}
+.compass-n{top:-3px;left:calc(50% - 7px);color:#f4d188}.compass-e{right:-3px;top:calc(50% - 9px)}.compass-s{bottom:-3px;left:calc(50% - 7px)}.compass-w{left:-3px;top:calc(50% - 9px)}
+.hud-icons{display:flex;justify-content:center;gap:12px}
+.hud-icons button{width:46px;height:46px;min-width:44px;min-height:44px;display:grid;place-items:center;padding:1px;border:1px solid #cdb87990;border-radius:50%;background:radial-gradient(circle at 40% 30%,#e9dfbaee,#c6b47fee);box-shadow:0 3px 12px #102b3033;cursor:pointer}
+.hud-icons button img{width:100%;height:100%;object-fit:contain;display:block}
+.hud-icons button:hover,.hud-icons button:focus-visible{outline:2px solid #f3dd9f;outline-offset:3px;background:#f1e6c2}
+.hud-full-map{z-index:90!important}
+.map-chapters-link{display:block;margin:8px auto 0;padding:10px 16px;min-height:44px;border:1px solid #b7ad83;background:#2f4e3de0;color:#f3e3b5;font:14px 'Songti SC',serif;cursor:pointer}
+.campaign-game .explore-hud{left:26px;bottom:24px;top:auto;max-width:calc(100% - 80px);padding:0;background:none;border:0;box-shadow:none;color:#f3eddd;pointer-events:none;text-shadow:0 1px 4px #152d2a}
+.campaign-game .explore-hud>.pc-eyebrow,.campaign-game .explore-hud>p,.campaign-game .explore-hud>small,.campaign-game .explore-hud button{display:none}
+.campaign-game .explore-hud .explore-row{display:block;margin:0}.campaign-game .explore-hud .explore-goal{font-size:14px;color:inherit}
+.world-game .interact-button,.campaign-game .explore-prompt{bottom:28px;left:50%;right:auto;transform:translateX(-50%);font-size:16px;min-height:44px}
+@media(max-width:650px){.game-hud{right:max(16px,env(safe-area-inset-right));top:max(18px,env(safe-area-inset-top));gap:10px}.hud-minimap{width:114px;height:114px;padding:9px}.hud-icons{gap:10px}.hud-icons button{width:44px;height:44px}.campaign-game .explore-hud{left:16px;bottom:20px;max-width:calc(100% - 32px)}.campaign-game .campaign-location{max-width:calc(100vw - 165px)}}
+@media(prefers-reduced-motion:reduce){.hud-minimap{transition:none}}
+.task-panel-backdrop{position:fixed;inset:0;z-index:110;display:flex;justify-content:flex-end;background:#122822b8;padding:20px;box-sizing:border-box}
+.task-panel{position:relative;width:min(480px,100%);height:100%;overflow:auto;box-sizing:border-box;background:#f4ecd5;color:#293f34;border:1px solid #b9a578;box-shadow:0 12px 40px #10251f80;font-family:'Songti SC',serif}
+.task-panel-close{position:absolute;right:14px;top:10px;border:0;background:transparent;color:#51462f;font-size:34px;cursor:pointer}
+.task-panel-body{padding:35px 32px}.task-panel-kicker,.task-current>span{font-size:13px;letter-spacing:.12em;color:#8d7043}.task-panel h2{font-size:30px;margin:5px 0 20px}.task-panel h3{font-size:21px;margin:8px 0}.task-panel p{line-height:1.7}.task-progress{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-top:1px solid #c9b993;border-bottom:1px solid #c9b993}.task-progress strong{font-size:25px}.task-progress small{font-size:15px;color:#827357}.task-current{padding:20px 0}.task-destination{color:#876837}.task-chapter-progress{list-style:none;margin:0 0 24px;padding:0;border-top:1px solid #c9b993}.task-chapter-progress li{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid #ddd0b3}.task-chapter-progress li b{width:28px;color:#8c6f41}.task-chapter-progress li small{margin-left:auto;color:#86785e}.task-chapter-progress li.locked{opacity:.55}.task-continue{min-height:48px;width:100%;padding:10px;border:1px solid #987741;background:#d9bd7b;color:#2d3d30;font:17px 'Songti SC',serif;cursor:pointer}.task-continue span{float:right}
