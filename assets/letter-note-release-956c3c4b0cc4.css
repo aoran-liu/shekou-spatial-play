@@ -1,0 +1,45 @@
+/* Original Figma layers over the live, paused 3D scene. */
+.world-note-back:has(.figma-letter) {
+  padding: 16px 14px;
+  overflow: hidden;
+  background: #1a3025a8;
+  backdrop-filter: blur(8px);
+}
+.figma-letter-layout { position: relative; }
+.figma-letter {
+  position: absolute; left: 0; top: 0; width: 668px; height: 1043px;
+  transform-origin: top left; color: #4b4b4b;
+}
+.figma-letter img {
+  display: block; max-width: none; user-select: none; pointer-events: none;
+}
+.figma-letter-paper {
+  position: absolute; left: 0; top: 15px; width: 622px; height: 877px;
+  overflow: hidden; filter: drop-shadow(0 12px 20px #09180e55);
+}
+.figma-letter-paper img { object-fit: cover; }
+.figma-letter .figma-letter-title {
+  position: absolute; left: 159.6519775390625px; top: 198.19189453125px;
+  margin: 0; padding: 0; width: 351px; height: 35px;
+}
+.figma-letter .figma-letter-body {
+  position: absolute; left: 164.112060546875px; top: 321.591796875px;
+  margin: 0; padding: 0; width: 336px; height: 237px;
+}
+.figma-letter button {
+  position: absolute; display: block; margin: 0; padding: 0; border: 0;
+  background: transparent; cursor: pointer; touch-action: manipulation;
+  transition: filter 150ms;
+}
+.figma-letter-close { left: 575px; top: 0; width: 93px; height: 93px; }
+.figma-letter-continue { left: 44px; top: 865px; width: 533px; height: 178px; }
+.figma-letter button:hover { filter: brightness(1.08); }
+.figma-letter button:active { filter: brightness(.96); }
+.figma-letter button:focus-visible { outline: 3px dashed #fff0bd; outline-offset: 3px; border-radius: 12px; }
+.figma-letter-sr {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
+@media (prefers-reduced-motion: reduce) {
+  .figma-letter button { transition: none; }
+}

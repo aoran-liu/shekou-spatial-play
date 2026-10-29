@@ -1,0 +1,58 @@
+/* Keep the original header button and its action; replace only its visible mark. */
+.world-header .world-chapter {
+  font-family: 'STKaiti', 'KaiTi', '楷体', serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+.world-header .world-tools {
+  position: fixed;
+  top: 135px;
+  left: 3.5%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 9px;
+  max-width: none;
+}
+.world-header .world-tools button {
+  min-width: 90px;
+  padding: 11px 13px;
+  text-align: center;
+}
+/* Keep the current task clear of the left-side navigation. */
+.world-game .world-task { left: calc(3.5% + 112px); }
+.world-header .world-chapter { position: absolute; left: 36%; }
+.world-header .world-brand {
+  flex: 0 0 78px;
+  width: 78px;
+  height: 78px;
+  display: block;
+  background: url('../images/brand/shekou-factory-compact.png') center / contain no-repeat;
+  filter: brightness(0) invert(1) drop-shadow(0 1px 3px #14291ca8);
+}
+
+/* Keep the button's existing text available to screen readers. */
+.world-header .world-brand > * {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 800px) {
+  .world-header .world-tools { top: 104px; left: 4%; gap: 7px; }
+  .world-header .world-tools button { min-width: 76px; padding: 9px 10px; }
+  .world-game .world-task { left: calc(4% + 91px); max-width: calc(92% - 91px); }
+  .world-header .world-brand {
+    flex-basis: 64px;
+    width: 64px;
+    height: 64px;
+  }
+}

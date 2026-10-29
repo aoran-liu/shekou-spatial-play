@@ -1,0 +1,15 @@
+{
+  "revision": "956c3c4b0cc4",
+  "mapping": {
+    "index-CSSXA-Ra-ui-v4.js": "index-CSSXA-Ra-ui-v4-release-956c3c4b0cc4.js",
+    "WorldApp-Cudyktvr-ui-v4.js": "WorldApp-Cudyktvr-ui-v4-release-956c3c4b0cc4.js",
+    "App-DkrGJEOS-ui-v4.js": "App-DkrGJEOS-ui-v4-release-956c3c4b0cc4.js",
+    "asset-p62P8ijo-ui-v4.js": "asset-p62P8ijo-ui-v4-release-956c3c4b0cc4.js",
+    "figma-start-screen.js": "figma-start-screen-release-956c3c4b0cc4.js",
+    "figma-letter.js": "figma-letter-release-956c3c4b0cc4.js",
+    "figma-ballot.js": "figma-ballot-release-956c3c4b0cc4.js",
+    "figma-start-screen.css": "figma-start-screen-release-956c3c4b0cc4.css",
+    "letter-note.css": "letter-note-release-956c3c4b0cc4.css",
+    "figma-ballot.css": "figma-ballot-release-956c3c4b0cc4.css"
+  }
+}

@@ -1,0 +1,37 @@
+/* Palette sampled from the original cover; the cover artwork remains unchanged. */
+:root{--cover-sky:#728ca1;--cover-blue:#566d7c;--cover-ink:#353a3f;--cover-paper:#eeebe3;--cover-gold:#dfc17e;--cover-muted:#63737c}
+.world-game{color:var(--cover-paper)}
+.world-game .world-vignette{background:linear-gradient(#34475845,transparent 22% 76%,#26374655),radial-gradient(transparent 68%,#34475822)}
+.world-game .world-tools button{color:#f7f4ea;background:#354957d9;border-color:#d9d9d080;text-shadow:0 1px 3px #182937}
+.world-game .world-tools button:hover{background:#435e70f2}
+.world-game .world-task{color:var(--cover-ink);background:#eeebe3f2;border-color:#fff8e5c9;box-shadow:0 6px 20px #25384722}
+.world-game .world-task small{color:#566571}.world-game .world-task button{color:#6b5129}
+.world-game .task-line{background:var(--cover-gold)}
+.world-game .world-label>span:last-child{color:#f5f0df;background:#3e5668eb;border-color:#e6d7b480}
+.world-game .world-label.near>span:last-child{color:#283b4b;background:#ead7a5;border-color:#fbebc3}
+.world-game .label-dot{background:#e0c482;border-color:#f6e6bb;box-shadow:0 0 0 5px #d7bd7c33}
+.world-game .interact-button,.world-game .world-primary{color:#283b4b;background:#ead7a5;border-color:#fff0c9;box-shadow:0 5px 24px #23374733}
+.world-game .interact-button kbd{border-color:#7d8990}
+.world-game .world-primary:hover:not(:disabled){background:#f4e6bf}
+.world-game .world-note-back{background:#233747b3}
+.world-game .world-note{color:var(--cover-ink);background:var(--cover-paper)}
+.world-game .world-note p{color:#4c5b66}.world-game .world-note .note-small{color:#5c666d}
+.world-game .world-note .world-primary,.world-game .world-ballot .world-primary{color:#f7f2e5;background:#3e5668;border-color:#71899a}
+.world-game .world-note a{color:#705932}
+.world-game .world-routes button{color:#faf6e9;background:#354957c9;border-color:#d6d9d0;text-shadow:0 1px 3px #152838;border-radius:2px}
+.world-game .world-routes button:hover{background:#516b7dd9}
+.world-game .world-compass,.world-game .world-footer{color:#fff8e6;text-shadow:0 1px 4px #233747,0 0 8px #233747}
+.world-game .mobile-joystick{background:#3e566877;border-color:#f0e7cdcc;color:#fff8e6}
+.world-game .mobile-joystick:before{background:#728ca166;border-color:#efe8d6}
+.story-intro{background:#202b33;color:#f0e7d1}
+.story-intro .story-intro-background{filter:saturate(.65) sepia(.06) brightness(.82)!important}
+.story-intro .story-intro-shade{background:linear-gradient(to top,#17232cf5,#26364280 25%,transparent 60%),linear-gradient(145deg,#728ca126,#3e56681a)}
+.story-intro .story-intro-caption p{color:#f3ecd9;text-shadow:0 2px 12px #17232c}
+.story-intro .story-intro-skip{color:#f2e7cc;background:#334a5be6;border-color:#d9c18c99}
+.story-intro .story-intro-enter{color:#283b4b;background:linear-gradient(135deg,#dfc17e,#f1e3bb)}
+.story-intro .story-intro-speaker{color:#e4c783}.story-intro .story-intro-note{color:#d9dbd5}
+.story-intro .story-intro-portrait img{filter:saturate(.7) contrast(1.06) brightness(.88)}
+
+.district-review{position:absolute;z-index:35;left:50%;bottom:12px;transform:translateX(-50%);display:flex;gap:6px;align-items:center;background:#263d4fed;border:1px solid #c9b783;color:#f6eed8;padding:8px 10px;font:11px sans-serif;white-space:nowrap;max-width:96%;overflow:auto;border-radius:3px}.district-review button,.district-review a{background:#526c7e;border:1px solid #bac2bd80;color:#fff6dd;padding:7px 9px;text-decoration:none;font:inherit;cursor:pointer}.district-review span{padding:0 7px}.district-review button:focus-visible,.district-review a:focus-visible{outline:2px solid #ead6a0;outline-offset:2px}@media(max-width:600px){.district-review{font-size:9px;gap:3px;padding:5px}.district-review span{display:none}.district-review button,.district-review a{padding:7px}}
+
+.world-game:has(.district-review:not([data-camera="walk"])) .world-task,.world-game:has(.district-review:not([data-camera="walk"])) .world-labels,.world-game:has(.district-review:not([data-camera="walk"])) .interact-button,.world-game:has(.district-review:not([data-camera="walk"])) .mobile-joystick,.world-game:has(.district-review:not([data-camera="walk"])) .world-routes,.world-game:has(.district-review:not([data-camera="walk"])) .world-compass,.world-game:has(.district-review:not([data-camera="walk"])) .world-footer{display:none}

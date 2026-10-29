@@ -1,0 +1,68 @@
+/* The cover scales as one composition, preserving the Figma layer geometry. */
+.world-game.landing {
+  min-height: 0;
+}
+.world-game.landing > .world-header,
+.world-game.landing > .world-vignette,
+.world-game.landing > .world-footer {
+  visibility: hidden;
+}
+.figma-cover {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #172c38;
+}
+.figma-cover-stage {
+  position: relative;
+  width: min(100%, calc(100svh * 2056 / 1157));
+  aspect-ratio: 2056 / 1157;
+  flex: none;
+}
+.figma-cover-art {
+  position: absolute;
+  display: block;
+  max-width: none;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+}
+.figma-cover-start {
+  position: absolute;
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: filter 150ms;
+}
+.figma-cover-start:hover:not(:disabled) { filter: brightness(1.08); }
+.figma-cover-start:active:not(:disabled) { filter: brightness(.95); }
+.figma-cover-start:focus-visible { outline: 3px solid #fff3bf; outline-offset: 3px; }
+.figma-cover-start:disabled { opacity: .6; cursor: wait; }
+.figma-cover-status {
+  position: absolute;
+  bottom: max(16px, env(safe-area-inset-bottom));
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 90%;
+  padding: 10px 16px;
+  color: #fff6dc;
+  background: #172c38e6;
+  font: 14px/1.6 'Microsoft YaHei', sans-serif;
+  text-align: center;
+}
+.figma-cover-status button { margin-left: 12px; text-decoration: underline; }
+@media (orientation: portrait) {
+  /* Expand the touch target without stretching any Figma artwork. */
+  .figma-cover-start::after { content: ''; position: absolute; inset: -12px 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .figma-cover-start { transition: none; }
+}

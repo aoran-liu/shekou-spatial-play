@@ -1,0 +1,52 @@
+.figma-ballot-overlay {
+  position: absolute; inset: 0; z-index: 20; display: grid; place-items: center;
+  padding: 16px 14px; background: #14241b60; backdrop-filter: blur(3px);
+  transition: opacity 400ms;
+}
+.figma-ballot-layout { position: relative; }
+.figma-ballot-stage {
+  position: absolute; left: 0; top: 0; width: 683px; height: 1040px;
+  transform-origin: top left;
+}
+.figma-ballot-stage img { display: block; max-width: none; pointer-events: none; user-select: none; }
+.figma-ballot-paper { position: absolute; left: 0; top: 20px; filter: drop-shadow(0 12px 20px #09180e55); }
+.figma-ballot-choices { position: absolute; inset: 0; border: 0; margin: 0; padding: 0; pointer-events: none; }
+.figma-ballot-candidate {
+  position: absolute; left: 160px; width: 394px; height: 65px;
+  padding: 0; border: 0; background: transparent; pointer-events: auto;
+  cursor: pointer; touch-action: manipulation; border-radius: 8px;
+}
+.figma-ballot-candidate:focus-visible { outline: 3px dashed #8c5136; outline-offset: 2px; }
+.figma-ballot-name-hover {
+  position: absolute; left: 112px; top: 18px; width: 110px; height: 40px;
+}
+.figma-ballot-check {
+  position: absolute; left: 490px; width: 56px; height: 44px;
+  overflow: hidden; pointer-events: none;
+}
+.figma-ballot-close, .figma-ballot-submit {
+  position: absolute; margin: 0; padding: 0; border: 0; background: transparent;
+  cursor: pointer; touch-action: manipulation; transition: filter 150ms;
+}
+.figma-ballot-close { left: 590px; top: 0; width: 93px; height: 93px; }
+.figma-ballot-submit { left: 53px; top: 813px; width: 533px; height: 178px; }
+.figma-ballot-submit > span {
+  position: absolute; left: 45px; right: 85px; top: 68px;
+  color: #fff7dc; font: 600 28px/1.5 'STKaiti', 'KaiTi', serif;
+  letter-spacing: 2px; text-align: center; white-space: nowrap;
+  text-shadow: 0 1px 2px #865b2880;
+}
+.figma-ballot-submit:disabled { opacity: .5; cursor: default; }
+.figma-ballot-close:hover:not(:disabled), .figma-ballot-submit:hover:not(:disabled) { filter: brightness(1.08); }
+.figma-ballot-close:focus-visible, .figma-ballot-submit:focus-visible { outline: 3px dashed #fff0bd; outline-offset: 2px; border-radius: 10px; }
+.figma-ballot-hint {
+  position: absolute; top: 991px; left: 0; width: 639px; margin: 0;
+  color: #efe5c9; font: 15px/1.6 'Microsoft YaHei', sans-serif;
+  letter-spacing: 2px; text-align: center; text-shadow: 0 1px 3px #17271e;
+}
+.figma-ballot-policy { position: absolute; width: 549px; height: 58px; z-index: 5; pointer-events: none; }
+.figma-ballot-sr { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.figma-ballot-overlay.is-casting { opacity: 0; pointer-events: none; }
+@media (prefers-reduced-motion: reduce) {
+  .figma-ballot-overlay, .figma-ballot-close, .figma-ballot-submit { transition: none; }
+}
